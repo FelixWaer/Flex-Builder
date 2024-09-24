@@ -40,3 +40,13 @@ void print_ProjectData(struct Project* project)
 {
     printf("Project Name: %s Project Address: %s\n", project->ProjectName, project->ProjectPath);
 }
+
+void print_ProjectDataList(struct ProjectsInfo* projectsInfo)
+{
+    for (size_t i = 0; i < projectsInfo->size; i++)
+    {
+        printf("%d: ", i);
+        print_ProjectData(&projectsInfo->Projects[i]);
+    }
+
+}
